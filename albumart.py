@@ -24,10 +24,10 @@ if (__name__ == '__main__'):
     parser.add_argument('--host', default="localhost")
     args = parser.parse_args()
     mpd_host = args.host
-    
+
     client = MPDClient()
     curr_song = {}
-    
+
     try:
         client.connect(mpd_host,6600)
         curr_song = client.currentsong()
